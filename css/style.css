@@ -11,6 +11,11 @@ grid-template-rows: 1fr auto;
     margin-top: -150px;
     text-align: center;
 }
+@media (max-width:518px){
+    .all-content{
+        overflow: auto;
+        }
+}
 
 .kapsayici {
     width: 70%;
