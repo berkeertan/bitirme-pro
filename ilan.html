@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- Yazdığımız kelimelerin HTML dilinde birer kod satırı oluşturduğunu belirtmek için "HTML" tagi kullanıyoruz. -->
+<!-- lang="en" komutu yazım dilinin ingilizce olduğu anlamına gelmektedir. -->
+<html lang="en">
+    <!-- Head tagi içerisinde tanımlamalarımızı ve kullanıcağımız diğer dosyaların bağlantılarını yapmaktayız. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
+<!-- somut olarak görüntülenebilir. -->
+<body>
+    <div class="ilan-all-content">
+        <!-- nav tagi içerisinde bir navbar nesnesi oluşturuyoruz ve bu bizim navigasyon barımızı oluşturuyor. -->
+        <!-- Logo ve menümüz bu alanda yer alyor. navbar-light ve bg-light özellikleri ile arkaplan rengini değiştiriyoruz. -->     
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- logo_wrap isminde genişliği "nav" divinin genişliinin 75% i olan bir div oluşturuyoruz. -->
+            <div class="logo_wrap w-75">
+                <!-- logomuzu rahat boyutlandırmak amacıyla navbar-brand sınıf isminde ve geniş ekranda 1 gridlik -->
+                <!-- soldan boşluk bırakan a etiketi oluşturuyoruz.-->
+                <a class="navbar-brand offset-lg-1" href="index.html">
+                    <!-- a etiketi içerisine genişliği 200px olan img nesnesi ile logomuzu yerleştiriyoruz. -->
+                    <img  src="img/LOGO.png" alt="DeuStaj" class="logo-w">
+                </a>
+            </div>
+            <!-- navbar-toggler isimli bir buton oluşturuyoruz tipi buton tıklandığıda aşağıya doğru kayarak açılacak -->
+            <!-- tıklandığında #navbarTogglerDemo02 id'sine sahip collapse dvini aktif hale getiricek.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- butonun şekli hambuger menu şeklinde olması için span içerisne navbar-toggler-icon adında bir class veriyoruz. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- collapse adından bir div oluşturduk bu div genş ekranda bizim menümüzü ve daha küçük ekranlarda açılır kapanır menü -->
+            <!-- halini alarak görsellik ve kullanımı kolaylaştırcı bir özelliğe sahip olmaktadır.-->
+            <!-- burada collapse divimizin adı navbar-collapse açılırkpanır özelliği almasını ve offset-lg-4 ekranın sol kısmından 4 grid -->
+            <!-- sağa kaymasnı sağlamaktadır. -->    
+            <div class="collapse  navbar-collapse offset-lg-4 buton-konum" id="navbarTogglerDemo02">
+                <ul class="navbar-nav">
+                    <li class="nav-item active mb-2">
+                        <button type="button" class="btn nav-btn btn-light mr-3 btn-md">İlanlara Gözat <i class="fas fa-search"></i></button>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="firma-giris.html"><button type="button" class="btn nav-btn btn-primary mr-3 btn-md"><i class="far fa-building"></i> Firma Girişi</button></a>
+                    </li>
+                    <li class="nav-item mb-2"> 
+                        <a href="ogrenci-giris.html"><button type="button" class="btn nav-btn btn-secondary c-mr-3 btn-md"><i class="far fa-user"></i> Öğrenci Girişi</button></a>
+                    </li>
+                </ul>
+            </div>  
+        </nav>    
+        <div class="container-content">
+            <div class="ilan-content-wrap">
+                <div class="ilan-sol">
+                    <div class="ilan-content-header">
+                        <h3 class="m-0 mb-2 h3">İlan başlığı</h3>
+                        <span><i class="far fa-calendar-alt"></i> İlan Tarihi: 00/00/000</span>
+                        <span> - </span>
+                        <span>Geçerlilik Tarihi: 00/00/0000</span>
+                        <p class="m-0"><i class="far fa-building"></i> İlan Sektör..</p>
+                        <p><i class="fas fa-hashtag"></i> ilan no: 000000</p>
+                    </div>
+                    <div class="ilan-content">
+                        <div class="ilan-cntnt">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                            Repellat harum corrupti quod, tempora consequatur laboriosam animi 
+                            accusantium aliquid excepturi asperiores. Natus ipsam, quo aspernatur 
+                            officia voluptate sapiente pariatur molestias rerum! 
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Optio blanditiis dolor, molestiae ducimus similique perspiciatis 
+                            beatae odio debitis, ipsum rem enim consectetur. Eos blanditiis iste 
+                            animi? Unde provident aperiam atque!
+                        </div>
+                        <hr>
+                        <div class="basvur-btn">
+                            <button type="button" class="btn btn-primary bsvr-btn">
+                                Başvuru Yap&nbsp;<i class="far fa-check-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ilan-sag">
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- aşağıdaki alanımız sayfanın footer kısmıdır. footer tag'i içerisinde bir adet footer-div class'na sahip -->
+    <!-- div içerinde img nesnesine sahiptir ve bu img nesnesi içerisinde sitemizin logosu bulanmaktadır. -->
+    <footer>
+        <div class="footer-div-ilanlar text-center mx-auto">
+            <img src="img/LOGO.png" class="logo-ft"  >
+        </div>    
+    </footer>
+    <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
+    <script src="js/bootstrap-native-v4.min.js"></script> 
+</body>
+</html>
