@@ -13,6 +13,7 @@ grid-template-rows: 1fr auto;
 }
 @media (max-width:518px){
     .all-content{
+        -webkit-overflow-scrolling: auto;
         overflow: auto;
         }
 }
