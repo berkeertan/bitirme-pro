@@ -14,7 +14,7 @@ grid-template-rows: 1fr auto;
 @media (max-width:518px){
     .all-content{
         overflow: scroll;
-        height: calc(100% + 1px)
+        height: calc(100% + 1px);
         }
 }
 
