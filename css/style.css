@@ -15,6 +15,9 @@ grid-template-rows: 1fr auto;
     .all-content{
         overflow: auto;
         }
+        .ios-content{
+            -webkit-overflow-scrolling: touch;
+        }
 }
 
 .kapsayici {
