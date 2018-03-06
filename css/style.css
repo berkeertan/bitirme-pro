@@ -16,7 +16,7 @@ grid-template-rows: 1fr auto;
         overflow: auto;
         }
         .ios-content{
-            -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: auto;
         }
 }
 
