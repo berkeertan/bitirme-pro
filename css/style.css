@@ -13,10 +13,11 @@ grid-template-rows: 1fr auto;
 }
 @media (max-width:518px){
     .all-content{
-        overflow: auto;
+        overflow: scroll;
+        
         }
         .ios-content{
-            -webkit-overflow-scrolling: auto;
+           
         }
 }
 
