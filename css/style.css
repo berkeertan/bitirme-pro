@@ -579,6 +579,10 @@ a:hover{
 /* ilan-yonet */
 
 /*--------------- FİRMA-ÖĞRENCİ-PROFİL-BAŞLA ------------------ */
+.card-baslik:hover{
+    color:#007bff!important;
+    
+}
 .giris-btn{
     height: 40px;
 }
