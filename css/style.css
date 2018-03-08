@@ -735,6 +735,12 @@ a:hover{
     
 }
 /* ---------------İLAN SOL BAŞLANGIÇ ------------------ */
+@media(max-width:345px){
+    .img-boy{
+        width: 90%!important;
+    }
+}
+
 .ilan-sag {
     box-sizing: border-box;
     float: left;
