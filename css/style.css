@@ -351,9 +351,10 @@ grid-template-rows: 1fr auto;
     margin-bottom: 20px;
 }
 /* ----------------- İLANLAR SOL BAŞLANGIÇ ------------------ */
+
 .container-ilanlar .sol {
     box-sizing: border-box;
-    width: 30%;
+    width: 40%;
     float: left;
     padding: 30px;
 }
@@ -443,6 +444,11 @@ grid-template-rows: 1fr auto;
   .md-checkbox label {
     cursor: pointer;
     font-weight: 500;
+    height: 20px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+    line-height: 20px;
   }
   .md-checkbox label:before, .md-checkbox label:after {
     content: "";
@@ -489,7 +495,7 @@ grid-template-rows: 1fr auto;
 .container-ilanlar .visible {
     box-sizing: border-box;
     overflow: hidden;
-    width: calc(70% - 30px);
+    width: 60%;
     float: left;
     padding-top: 30px;
 }
