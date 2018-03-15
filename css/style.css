@@ -16,6 +16,10 @@ grid-template-rows: 1fr auto;
     width: 70%;
     height: 80px;
 }
+.card-1:hover{
+    transform: scale3d(1.05,1.10,1.10)!important;
+    visibility: visible!important;
+}
 .a-ilan-img {
     height: 40px!important;
     max-width: 100%!important;
