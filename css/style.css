@@ -12,6 +12,26 @@ grid-template-rows: 1fr auto;
     text-align: center;
 }
 
+@media (min-width: 992px){
+    .en-son-cards {
+        max-width: 960px;
+    }
+}
+@media (min-width:768px)
+{
+    .firma-card-list{
+        padding-top: 15px;
+    }
+    .k-button{
+        margin-top: 20px!important;
+    }
+}
+@media (max-width:855px) and (min-width:774px){
+    .en-son-cards{
+        max-width: 459px!important;
+    }
+}
+
 .kapsayici {
     width: 70%;
     height: 80px;
@@ -104,7 +124,7 @@ grid-template-rows: 1fr auto;
 
  @media (max-width: 855px) {
     .card-1{
-        width: 145px!important;
+        width: 141px!important;
     }
     .card {
         width: 140px!important;
@@ -666,7 +686,7 @@ a:hover{
 /* ----------------- CUSTOM-CHECKBOX-BİTİŞ ------------------ */
     
 
-/* ------------------ ilanlar.htm \BİTİŞ/ ------------------- */
+/* ------------------ ilanlar.html \BİTİŞ/ ------------------- */
 
 /* ------------------- SİFRE-DEGİS-BASLA -------------------- */
 
@@ -688,6 +708,11 @@ a:hover{
 }
 #ilanlar, #sifre {
     display: none;
+}
+
+.f-pro-sag-active {
+    background: #007bff !important;
+    color: white;
 }
 
 .card-baslik:hover{

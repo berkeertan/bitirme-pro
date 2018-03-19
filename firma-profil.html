@@ -61,10 +61,18 @@
                         <img class="card-img-top img-boy" src="img/vestel-1.jpg" alt="Card image cap">  
                         <hr>                                           
                         <div class="card-body text-center card-profil">        
-                            <input class="dosya-sec" id="dosya-sec"  type="file"  onchange="get_filename(this);" style="display: none;">
-                            <h5 onclick="document.querySelector('.dosya-sec').click();" class="card-title card-baslik text-dark pb-2" data-taget="open" id="ac">Fotoğrafı Güncelle  <i class="far fa-image"></i></h5></input>       
-                            <p id="icerik"></p> 
-                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button">Bilgileri Düzenle</button>
+                            <input id="img-input" type="file" style="display: none;">
+                                <label for="img-input" class="btn btn-info w-75" style="font-weight: bold;" id="img-btn">Yeni Logo Seç
+                                    <i class="far fa-image"></i>
+                                </label>
+                                <div class="alert alert-info" id="img-w" style="display: none;">
+                                    Sadece <strong>JPG, JPEG ve PNG</strong> dosya türlerini seçebilirsiniz.
+                                </div>                        
+                                <h6 id="img-name"></h6>       
+                                <div style="margin-bottom: 10px;">
+                                    <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
+                                </div>
+                            <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button f-pro-sag-active">Bilgileri Düzenle</button>
                             <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
                             <button type="button" data-content="sifre" class="btn prf-btn w-75 butons c_button">Şifre Değiştir</button>      
                         </div>
@@ -135,32 +143,7 @@
         </footer> 
             <!-- bootstrap kütüphanesi bünyesinde yazmış olduğumuz kodların javascript düzenlemelerinin bulunduğu dosyayı projemize ekledik. -->
             <script src="js/bootstrap-native-v4.min.js"></script>
-            <script>
-
-                var buttons = Array.from(document.getElementsByClassName("c_button"));
-                var contents = Array.from(document.getElementsByClassName("content_c"));
-
-                for (var i in buttons) {
-                    buttons[i].addEventListener("click", function() {
-                        var content_id = this.getAttribute("data-content");
-
-                        for (var j in contents) {
-                            contents[j].style.display = "none";
-                        }
-                        
-                        document.getElementById(content_id).style.display = "block";
-                    });
-                }
-            
-            </script> 
-                <script>
-                  function get_filename(obj,hidden)
-                    {
-                        var file = obj.value;
-                        var icerik = document.getElementById("icerik");
-                        icerik.innerHTML = file;
-                    }                                               
-                </script>
+            <script src="js/firmaprofil_scripts.js"></script>
 
 </body>
 </html>
