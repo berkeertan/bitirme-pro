@@ -17,7 +17,7 @@ grid-template-rows: 1fr auto;
     height: 80px;
 }
 .card-1:hover{
-    transform: scale3d(1.10,1.10,1.10)!important;
+    transform: scale3d(1.10,1.10,1.10);
     -webkit-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
@@ -686,6 +686,10 @@ a:hover{
 .card-baslik{
     cursor: pointer;
 }
+#ilanlar, #sifre {
+    display: none;
+}
+
 .card-baslik:hover{
     color:#007bff!important;
     
