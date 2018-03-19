@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .ddl {
+            padding: 5px;
+            border: 1px solid black;
+            width: 200px;
+            cursor: pointer;
+            margin:50px;
+        }
+        .ddl:hover{
+            color:red;
+        }
+        .ddl-p {
+            color:black !important;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 250px;
+            display:none;
+        }
+
+
+        .ddl-p ul li {
+            list-style: none;
+            margin: 4px
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inputamk">
+    <br>
+    <div id="target"></div>
+    <div class="ddl" id="ddl" data-target="">
+        Click me bruh!
+    </div>
+    <div class="ddl-p" id="ddl-p" >
+            <ul>
+                <li>Baba</li>
+                <li>yaga</li>
+                <li>falan</li>
+            </ul>
+        </div>
+    <script>
+       /* const toggle = document.getElementById("ddl");
+        toggle.addEventListener("click", function (){ 
+        var target = this.get("data-target");
+        var te = document.getElementById(target);
+        te.style.display = (te.style.display == "block") ? "none" : "block";
+         
+        });*/
+        /*const input = document.getElementById("inputamk");
+        const target = document.getElementById("target");
+        input.addEventListener("keydown", function() {
+            var deger = this.value;
+            console.log(deger);
+            target.innerHTML = deger;     
+        });*/
+  
+    </script>
+    
+</body>
+</html>
