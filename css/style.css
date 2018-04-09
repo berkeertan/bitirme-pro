@@ -104,9 +104,6 @@ grid-template-rows: 1fr auto;
     width: 200px;
     margin-top: 20px;
 }
-.card-img-top{
-    height: 44px;
-}
 .card-1 {
     background-color: white;
 }
