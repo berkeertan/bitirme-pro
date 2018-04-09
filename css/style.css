@@ -13,12 +13,6 @@ grid-template-rows: 1fr auto;
     }
 }
 
-@media (max-width: 1030px){
-    .navbar-collapse{
-        margin-right: -20px!important;
-    }
-}
-
 .firmalar {
     margin-top: -150px;
     text-align: center;
@@ -549,6 +543,7 @@ grid-template-rows: 1fr auto;
     -webkit-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 49px -5px rgba(0,0,0,0.75);
+    
 }
 
 .ilanlar-content p {
@@ -807,10 +802,16 @@ a:hover{
         height: 30px;
     }
 }
-@media (max-width:505px){
-    .btns{
-       width: 70px;    
+@media (max-width:380px){
+    .btns-kapsar{
+        margin-left: 15px;
     }
+    .ilanlar-content p{
+        font-size: 8pt;
+    }
+}
+
+@media (max-width:505px){
     .p-yonet{
         font-size: 9px;
            text-align: center; 

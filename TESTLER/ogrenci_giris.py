@@ -54,7 +54,6 @@ class ogrenci_giris:
 
             self.el_id.send_keys(u_name[i])
             self.el_pas.send_keys(u_pass[i])
-            
             self.sb_btn.click()
 
             result = None
@@ -64,12 +63,15 @@ class ogrenci_giris:
                 result = True
             except:
                 result = False 
-            
+                
             if result:
                 cprint(Fore.GREEN, "Giriş Başarılı")
             else:
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
+    
+        
+        
 
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 ogrenci_giris = ogrenci_giris(driver, "http://localhost:8080/ogrenci-giris", {"username": "username", "pass": "pass", "deger": "logan", "submit_button": "submit_button"})
