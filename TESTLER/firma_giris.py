@@ -3,6 +3,7 @@ from selenium import webdriver
 import colorama 
 from colorama import Fore, Back, Style
 
+import datetime
 import time
 
 colorama.init()
@@ -10,9 +11,9 @@ colorama.init()
 def cprint(color, text):
     print(color + text)
 
-class ogrenci_giris:
+class firma_giris:
    
-    def __init__(self, driver, url, dizi):
+    def __init__(self, driver, url,dizi):
        self.driver = driver
        self.url = url
        self.driver.get(self.url)
@@ -35,19 +36,24 @@ class ogrenci_giris:
             result = None
 
             try:
-                self.check = self.driver.find_element_by_id(self.degerler["deger"]).is_displayed()
+                self.check = self.driver.find_element_by_class_name(self.degerler["deger"]).is_displayed()
                 result = True
             except:
                 result = False 
             
             if result:
+                date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("LOGS/log-firma.txt", "a") as file:
+                    file.write(" " + "\n")   
+                    file.write(str(date_t))
+                    file.write(" " + "\n")
+                    file.write("Basarili test: Basarili")
+                    file.write(" " + "\n")  
                 cprint(Fore.GREEN, "Giriş Başarılı")
             else:
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
-                self.el_id.clear()
-                self.el_pas.clear()
-
+                
     def basarisiz(self,u_name,u_pass):
         for i in range(len(u_name)):               
             self.el_id.clear()
@@ -55,12 +61,10 @@ class ogrenci_giris:
 
             self.el_id.send_keys(u_name[i])
             self.el_pas.send_keys(u_pass[i])
-            self.sb_btn.click()
-
-            result = None
+            self.sb_btn.click()        
 
             try:
-                self.check = self.driver.find_element_by_id(self.degerler["deger"]).is_displayed()
+                self.check = self.driver.find_element_class_name(self.degerler["deger"]).is_displayed()
                 result = True
             except:
                 result = False 
@@ -68,20 +72,29 @@ class ogrenci_giris:
             if result:
                 cprint(Fore.GREEN, "Giriş Başarılı")
             else:
+                date_t = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                with open("LOGS/log-firma.txt", "a") as file:
+                    file.write(" " + "\n")   
+                    file.write(str(date_t))
+                    file.write(" " + "\n")
+                    file.write("Basarisiz test: Basarisiz")
+                    file.write(" " + "\n")  
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
-    
 
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
-ogrenci_giris = ogrenci_giris(driver, "http://localhost:8080/firma-giris", {"username": "username", "pass": "pass", "deger": "logan", "submit_button": "submit_button"})
+firma_giris = firma_giris(driver, "http://localhost:8080/firma-giris", {"username": "username", "pass": "pass", "deger": "dropdown-toggle", "submit_button": "submit_button"})
 
-ogrenci_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
-ogrenci_giris.basarili(["2016707002", "2016707005","1379248"], ["123456s", "123456", "35653235"])
+print(Fore.BLUE + "Başarısız test için 1, başarılı test için 2") 
+test = int(input(" "))
+print(" ")
 
+if test == 1:
+    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarisiz_test")
+    print("")
+    firma_giris.basarisiz(["20167070", "12345", "1379248"], ["5656", "6565", "35653235"])
 
-
-
- 
-        
-
-
+if test == 2:
+    print(Fore.YELLOW + "Çalıştırılan test: " + "firma_giris, basarili_test") 
+    firma_giris.basarili(["vestel"], ["123456"])
+   
