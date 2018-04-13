@@ -56,9 +56,9 @@ class ogrenci_sifre:
             self.button.click()
             time.sleep(2)
 
-            self.show = self.driver.find_element_by_class_name("content_c").is_displayed()
+            self.show = self.driver.find_element_by_id("sifre").is_displayed()
              
-            if self.show:
+            if self.show == False:
                 cprint(Fore.GREEN, "Giriş Başarılı")
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -82,9 +82,9 @@ class ogrenci_sifre:
         self.btn_success = self.driver.find_element_by_class_name("btn-success")
         self.btn_success.click() 
         time.sleep(2)
-        self.show = self.driver.find_element_by_class_name("content_c").is_displayed()
+        self.show = self.driver.find_element_by_id("sifre").is_displayed()
 
-        if self.show == True:
+        if self.show == False:
             d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             with open("LOGS/log-ogrsif.txt", "a") as file:
                 file.write(" " + "\n")   
