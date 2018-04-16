@@ -16,7 +16,7 @@
 <!-- Body tagi içerinsde yazdığımz kodlar projemizin ekranda görünen kısmını oluşturmaktadr burada yazılan şeyler -->
 <!-- somut olarak görüntülenebilir. -->
 <body>
-    <div class="uyari">
+    <div class="uyari" ><!-- !!BİLGİLENDİRME!! css'e display: none; verildi geçici olarak -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -85,20 +85,29 @@
                         <hr>                                           
                         <div class="card-body text-center card-profil">        
                             <input id="img-input" type="file" style="display: none;">
-                                <label for="img-input" class="btn btn-info w-75" style="font-weight: bold;" id="img-btn">Yeni Logo Seç
-                                    <i class="far fa-image"></i>
-                                </label>
-                                <div class="alert alert-info" id="img-w" style="display: none;">
-                                    Sadece <strong>JPG, JPEG ve PNG</strong> dosya türlerini seçebilirsiniz.
-                                </div>                        
-                                <h6 id="img-name"></h6>       
-                                <div style="margin-bottom: 10px;">
-                                    <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
-                                </div>
+                            <label for="img-input" class="btn btn-info w-75" style="font-weight: bold;" id="img-btn">Yeni Logo Seç
+                                <i class="far fa-image"></i>
+                            </label>
+                            <div class="alert alert-info" id="img-w" style="display: none;">
+                                Sadece <strong>JPG, JPEG ve PNG</strong> dosya türlerini seçebilirsiniz.
+                            </div>                        
+                            <h6 id="img-name"></h6>       
+                            <div style="margin-bottom: 10px;">
+                                <button id="up-btn" type="button" class="btn btn-success w-75" style="display: none;">Logoyu Güncelle</button>
+                            </div>
                             <button type="button" data-content="ilan_yukle" class="btn prf-btn w-75 mb-3 butons c_button">İlan Ekle</button>   
                             <button type="button" data-content="bilgiler" class="btn prf-btn mb-3 w-75 c_button f-pro-sag-active">Bilgileri Düzenle</button>
                             <button type="button" data-content="ilanlar" class="btn prf-btn w-75 mb-3 prf-btn-fcs c_button">İlanları Yönet</button>    
-                            <button type="button" data-content="sifre" class="btn prf-btn w-75 c_button">Şifre Değiştir</button>       
+                            <button type="button" data-content="sifre" class="btn prf-btn w-75 mb-3 c_button">Şifre Değiştir</button> 
+                            <div class="yonetici-active">
+                                <div class="yonetici-baslik">Yönetici Paneli</div>
+                                <button type="button" data-content="sirketler" class="btn prf-btn w-75 mb-3 c_button">Şirketleri Listele</button> 
+                                <button type="button" data-content="sirket-ilan" class="btn prf-btn w-75 mb-3 c_button">Şirket İlanlarını Görüntüle</button>
+                                <button type="button" data-content="sirket-onay" class="btn prf-btn w-75 mb-1 c_button">Onay Bekleyen Şirketler</button> 
+                                <hr>
+                                <button type="button" data-content="ogrenci-prfl" class="btn prf-btn w-75 mb-3 mt-1 c_button">Öğrenci Profilleri</button> 
+                                <button type="button" data-content="basvurular" class="btn prf-btn w-75 mb-3 c_button">Öğrenci Başvuruları</button> 
+                            </div>   
                         </div>
                     </div>
                 </div>
@@ -221,6 +230,203 @@
                         <textarea class="form-control area" id="exampleFormControlTextarea1" rows="5" placeholder="Açıklama yazın..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Gönder</button>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirketler">               
+                <div class="ilan-baslik-admin">
+                        <p class="admn-ilanbas">Şirketler</p>
+                </div>
+                <div class="ilan-baslik-admin" >
+                    <div class="sirket-ara">
+                        <form class="form-inline srkt-ara">
+                            <input  type="text" placeholder="Şirket" name="ara">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                        <a href="#"><h6 class="m-0 text-primary">Şirket Adı</h6></a>
+                        <p class="sirket-ad"><i class="far fa-building"></i> Bulunduğu il-ilçe</p>
+                        <p class="sirket-ad"><i class="fas fa-at"></i> e-mail</p>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Şirket Profilini Görüntüle</p></button>  
+                        </div>
+                </div>
+                <div class="ilanlar-content">
+                        <a href="#"><h6 class="m-0 text-primary">Şirket Adı</h6></a>
+                        <p class="sirket-ad"><i class="far fa-building"></i> Bulunduğu il-ilçe</p>
+                        <p class="sirket-ad"><i class="fas fa-at"></i> e-mail</p>
+                        <div class="ilan-sag-img">
+                            <a href="#" >
+                                <div class="sirket-logosu">
+                                    <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="btns-kapsar-sirket w-100">
+                            <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Şirket Profilini Görüntüle</p></button>  
+                        </div>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirket-ilan">
+                <div class="ilan-baslik-admin">
+                    <p class="admn-ilanbas">İlanlar</p>
+                </div>
+                <div class="ilan-baslik-admin" style="height: 60px;">
+                    <div class="form-group-admin">
+                        <div class="btn-group bolumsec">
+                            <button type="button" class="btn bg-light border-1 dropdown-toggle w-100" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Şirketler
+                            </button>
+                            <div class="dropdown-menu pl-2 bolum-sec-pro">
+                                <div class="md-checkbox">
+                                    <input id="s1" type="checkbox" checked>
+                                    <label for="s1">Item 1</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s2" type="checkbox">
+                                    <label for="s2">Item 2</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s3" type="checkbox">
+                                    <label for="s3">Item 3</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s4" type="checkbox">
+                                    <label for="s4">Item 4</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s5" type="checkbox">
+                                    <label for="s5">Item 5</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s6" type="checkbox">
+                                    <label for="s6">Item 6</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s7" type="checkbox">
+                                    <label for="s7">Item 7</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s8" type="checkbox">
+                                    <label for="s8">Item 8</label>
+                                </div>
+                                <div class="md-checkbox">
+                                    <input id="s9" type="checkbox">
+                                    <label for="s9">Item 9</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">İlan başlığı</h6>
+                    <p class="ilan-alt">Şirket adı - Bulunduğu il</p>
+                    <p1 class="ilan-alt">İlan açıklama satırı..</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">İlanı Düzenle</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">İlanı sil</p></button>  
+                    </div>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="sirket-onay">
+                <div class="ilan-baslik-admin">
+                    <p class="admn-ilanbas">Onay Bekleyen Şirketler</p>
+                </div>
+
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">Şirket Adı</h6>
+                    <p class="ilan-alt"><i class="far fa-building"></i> Bulunduğu İl-İlçe</p>
+                    <p1 class="ilan-alt"><i class="fas fa-at"></i> E-Mail</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Bilgileri Gör</p></button> 
+                        <button type="button" class="btn btn-success btns btns-sirket btn-sm"><p class="p-yonet">Kabul Et</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">Reddet</p></button>  
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                    <h6 class="m-0 text-primary">Şirket Adı</h6>
+                    <p class="ilan-alt"><i class="far fa-building"></i> Bulunduğu İl-İlçe</p>
+                    <p1 class="ilan-alt"><i class="fas fa-at"></i> E-Mail</p1>
+                    <div class="ilan-sag-img">
+                        <a href="#" >
+                            <div class="sirket-logosu">
+                                <img class="sirket-logo" src="img/inovera.jpeg" alt="">
+                            </div>
+                        </a>
+                    </div> 
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Bilgileri Gör</p></button>  
+                        <button type="button" class="btn btn-success btns btns-sirket btn-sm"><p class="p-yonet">Kabul Et</p></button>  
+                        <button type="button" class="btn btn-danger btns btns-sirket btn-sm"><p class="p-yonet">Reddet</p></button>  
+                    </div>
+                </div>               
+            </div>
+            <div class="visible mx-auto visible-margin content_c" id="ogrenci-prfl">               
+                <div class="ilan-baslik-admin">
+                        <p class="admn-ilanbas">Öğrenciler</p>
+                </div>
+                <div class="ilan-baslik-admin" >
+                    <div class="sirket-ara">
+                        <form class="form-inline srkt-ara">
+                            <input  type="text" placeholder="Öğrenci.." name="ara">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                    <a href="#"><h6 class="m-0 text-primary">Öğrencinin Adı</h6></a>
+                    <p class="sirket-ad"><i class="far fa-building"></i> Eğitim Gördüğü Okul</p>
+                    <p class="sirket-ad"><i class="fas fa-hashtag"></i> Öğrenci Numarası</p>
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Öğrenci Profilini Görüntüle</p></button>  
+                    </div>
+                </div>
+                <div class="ilanlar-content">
+                    <a href="#"><h6 class="m-0 text-primary">Öğrencinin Adı</h6></a>
+                    <p class="sirket-ad"><i class="far fa-building"></i> Eğitim Gördüğü Okul</p>
+                    <p class="sirket-ad"><i class="fas fa-hashtag"></i> Öğrenci Numarası</p>
+                    <div class="btns-kapsar-sirket w-100">
+                        <button type="button" class="btn btn-info btns btns-sirket btn-sm"><p class="p-yonet">Öğrenci Profilini Görüntüle</p></button>  
+                    </div>
                 </div>               
             </div>
         </div>    

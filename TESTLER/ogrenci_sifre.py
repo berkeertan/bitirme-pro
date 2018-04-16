@@ -21,6 +21,7 @@ class ogrenci_sifre:
     
 
     def __init__(self, driver, url, url2, dizi):
+    
         self.driver = driver 
         self.url = url 
         self.url_2 = url2
@@ -54,7 +55,7 @@ class ogrenci_sifre:
             self.new.send_keys(new[i])
             self.new_b.send_keys(new_b[i])
             self.button.click()
-            time.sleep(2)
+            time.sleep(1)
 
             self.show = self.driver.find_element_by_id("sifre").is_displayed()
              
@@ -66,8 +67,12 @@ class ogrenci_sifre:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
-                    file.write("Basarisiz test: Basarisiz")
-                    file.write(" " + "\n")              
+                    file.write("Yapılan test: Başarısız şifre testi")
+                    file.write(" " + "\n")
+                    file.write("Beklenen sonuç: Başarısız")
+                    file.write(" " + "\n") 
+                    file.write("Alınan sonuç: Başarısız")  
+                    file.write(" " + "\n\n")           
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
 
@@ -90,9 +95,14 @@ class ogrenci_sifre:
                 file.write(" " + "\n")   
                 file.write(str(d))
                 file.write(" " + "\n")
-                file.write("Başarılı test: Başarılı")
+                file.write("Yapılan test: Başarılı şifre testi")
                 file.write(" " + "\n")
-            cprint(Fore.GREEN, "Giriş Başarılı")                             
+                file.write("Beklenen sonuç: Başarılı")
+                file.write(" " + "\n")
+                file.write("Alınan sonuç: Başarılı")
+                file.write(" " + "\n\n")
+            cprint(Fore.GREEN, "Giriş Başarılı")
+                               
             time.sleep(0.5)
         else:
             cprint(Fore.RED, "Giriş Başarısız")
