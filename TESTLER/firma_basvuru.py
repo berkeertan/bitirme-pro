@@ -59,7 +59,7 @@ class firma_basvuru:
             else:
                 cprint(Fore.GREEN, "Başarılı")
     
-    def basarili(self,mail):
+    def basarili(self, mail):
         db2 = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor2 = db2.cursor()
           

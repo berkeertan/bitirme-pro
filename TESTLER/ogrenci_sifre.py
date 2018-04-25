@@ -84,8 +84,7 @@ class ogrenci_sifre:
                         file.write("Beklenen sonuç: Başarısız")
                         file.write(" " + "\n") 
                         file.write("Alınan sonuç: Başarısız")  
-                        file.write(" " + "\n\n")   
-                        file.write("TEST BAŞARILI")        
+                        file.write(" " + "\n\n")           
                     cprint(Fore.RED, "Başarısız")
                     time.sleep(0.5)
                 
@@ -103,8 +102,7 @@ class ogrenci_sifre:
                     file.write("Beklenen sonuç: Başarısız")
                     file.write(" " + "\n") 
                     file.write("Alınan sonuç: Başarısız")  
-                    file.write(" " + "\n\n") 
-                    file.write("TEST BAŞARILI")          
+                    file.write(" " + "\n\n")           
                 cprint(Fore.RED, "Başarısız")
                 time.sleep(0.5)
                 
