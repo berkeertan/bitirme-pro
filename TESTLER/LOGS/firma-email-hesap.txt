@@ -1,0 +1,42 @@
+ 
+2018-04-27 01:19:01 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:20:05 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:26:15 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:31:16 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:36:32 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:43:10 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+
+ 
+2018-04-27 01:53:49 
+Yapýlan test: Baþarýlý firma kayýt testi 
+Beklenen sonuç: Baþarýlý 
+Alýnan sonuç: Baþarýlý 
+

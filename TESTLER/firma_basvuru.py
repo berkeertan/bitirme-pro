@@ -71,7 +71,6 @@ class firma_basvuru:
             time.sleep(3)
 
             cursor2.execute("SELECT * FROM f_basvurular")
-            print (cursor2.rowcount)
 
             if cursor2.rowcount > self.cursor.rowcount:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")

@@ -112,8 +112,7 @@ class ogrenci_bilgi:
                 cprint(Fore.RED, "Basarisiz")
                 time.sleep(0.5)
                 
-
-
+                
 driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 

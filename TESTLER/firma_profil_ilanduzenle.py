@@ -18,7 +18,8 @@ def cprint(color, text):
 
 class firma_ilan_duzenle:
 
-    def __init__(self, driver, url, url2, dizi, k_ad,k_sif):
+    def __init__(self, driver, url, url2, dizi, k_ad, k_sif):
+        
         self.driver = driver
         self.url = url
         self.url2 = url2
@@ -47,7 +48,7 @@ class firma_ilan_duzenle:
         self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
         self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
     
-    def basarili(self, ilan_baslik, ilan_mail, ilan_text,ilan_adres):
+    def basarili(self, ilan_baslik, ilan_mail, ilan_text, ilan_adres):
         db = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
 
