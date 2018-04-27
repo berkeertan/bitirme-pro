@@ -31,26 +31,36 @@ class e_mail:
     def basarili(self, mail, firma_isim, firma_giris_adi, firma_sifre_a, firma_sifre_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
-        cursor_update = db.cursor()
-        cursor_firma_count = db.cursor()
+        cursor_2 = db.cursor()
+        cursor_firma_kod = db.cursor()
+        firma_before_insert = db.cursor()
         firma_after_insert = db.cursor()
-        cursor_firma_count.execute("SELECT * FROM firmalar")
+        firma_before_insert.execute("SELECT * FROM firmalar")
 
         self.app_btn = self.driver.find_element_by_id("f_basvuru_btn")
         self.e_mail.send_keys(mail)
         self.app_btn.click()
         self.driver.find_element_by_class_name("btn-success").click()
-        time.sleep(5)
+        db.commit()
+        time.sleep(3)
 
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular ORDER BY id DESC LIMIT 1")
+        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE id = (SELECT MAX(id) FROM f_basvurular)")
+        time.sleep(2)
         result = cursor.fetchall()
+        for i in result:
+            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
+            time.sleep(2)
 
-        for row in result:
-            cursor_update.execute("UPDATE f_basvurular SET f_basvuru_kod_onay = 1 WHERE f_basvuru_url = '%s'" % (row[0]))
-            db.commit()
-            self.driver.get("http://localhost:100/firma-kayit$url=" + row[0])
-            break
+        cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
+        result_kod = cursor_firma_kod.fetchall()
+        db.commit()
 
+        for y in result_kod:
+            self.kod_input = self.driver.find_element_by_id("f_basvuru_onay")
+            self.kod_input.send_keys(y[0])
+            self.driver.find_element_by_id("f_basvuru_kod_btn").click()
+            time.sleep(2)
+        
         self.dizi = {"firma_isim_2": "firma_isim", "firma_giris_adi_2": "firma_giris_adi", "firma_sifre_a_2": "firma_sifre_a", "firma_sifre_b_2": "firma_sifre_b", "f_basvuru_tamamla_btn": "f_basvuru_tamamla_btn"}
         self.f_ad = self.driver.find_element_by_id(self.dizi["firma_isim_2"])
         self.k_ad = self.driver.find_element_by_id(self.dizi["firma_giris_adi_2"])
@@ -68,7 +78,7 @@ class e_mail:
             time.sleep(3)
             firma_after_insert.execute("SELECT * FROM firmalar")
         
-            if firma_after_insert.rowcount > cursor_firma_count.rowcount:
+            if firma_after_insert.rowcount > firma_before_insert.rowcount:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 with open("LOGS/firma-email-hesap.txt", "a") as file:
                     file.write(" " + "\n")   
@@ -84,15 +94,14 @@ class e_mail:
                                    
             else:
                 cprint(Fore.RED, "Basarisiz")
-
+            
     def basarisiz(self, mail_2, firma_isim, firma_giris_adi, firma_sifre_a, firma_sifre_b):
         db = MySQLdb.connect(host= "127.0.0.1", user = "root", passwd = "", db= "deustaj", use_unicode=True, charset="utf8")
         cursor = db.cursor()
         cursor_update = db.cursor()
-        cursor_firma_count = db.cursor()
-        firma_after_insert = db.cursor()
-        cursor_firma_count.execute("SELECT * FROM firmalar")
-
+        cursor_firma_kod = db.cursor()
+        cursor_record = db.cursor()
+        
         self.app_btn = self.driver.find_element_by_id("f_basvuru_btn")
 
         for i in range(len(mail_2)):
@@ -117,16 +126,27 @@ class e_mail:
                 cprint(Fore.RED, "Basarisiz")
             else:
                     self.driver.find_element_by_class_name("btn-success").click()
+                    db.commit()
             time.sleep(5)
+            
 
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular ORDER BY id DESC LIMIT 1")
+        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE id = (SELECT MAX(id) FROM f_basvurular)")
+        time.sleep(2)
         result = cursor.fetchall()
 
-        for row in result:
-            cursor_update.execute("UPDATE f_basvurular SET f_basvuru_kod_onay = 1 WHERE f_basvuru_url = '%s'" % (row[0]))
-            db.commit()
-            self.driver.get("http://localhost:100/firma-kayit$url=" + row[0])
-            break
+        for i in result:
+            self.driver.get("http://localhost:100/firma-kayit$url=" + i[0])
+            time.sleep(2)
+
+        cursor_firma_kod.execute("SELECT f_basvuru_kod FROM f_basvurular WHERE f_basvuru_url = '%s'" % (i[0]))
+        result_kod = cursor_firma_kod.fetchall()
+        db.commit()
+
+        for y in result_kod:
+            self.kod_input = self.driver.find_element_by_id("f_basvuru_onay")
+            self.kod_input.send_keys(y[0])
+            self.driver.find_element_by_id("f_basvuru_kod_btn").click()
+            time.sleep(2)
 
         self.dizi = {"firma_isim_2": "firma_isim", "firma_giris_adi_2": "firma_giris_adi", "firma_sifre_a_2": "firma_sifre_a", "firma_sifre_b_2": "firma_sifre_b", "f_basvuru_tamamla_btn": "f_basvuru_tamamla_btn"}
         self.f_ad = self.driver.find_element_by_id(self.dizi["firma_isim_2"])
@@ -145,11 +165,11 @@ class e_mail:
             self.pw.send_keys(firma_sifre_a[i])
             self.pw_con.send_keys(firma_sifre_b[i])
             self.submit_btn.click()
-            
-            time.sleep(3)
-            firma_after_insert.execute("SELECT * FROM firmalar")
+            time.sleep(2)
+
+            cursor_record.execute("SELECT f_basvuru_kod_onay FROM f_basvurular WHERE f_basvuru_kod_onay = 1")
         
-            if firma_after_insert.rowcount > cursor_firma_count.rowcount:           
+            if cursor_record == False:           
                 cprint(Fore.GREEN, "Basarili")
                                    
             else:
