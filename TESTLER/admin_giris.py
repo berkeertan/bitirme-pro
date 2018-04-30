@@ -107,7 +107,7 @@ class admin_giris:
                 cprint(Fore.RED, "Giriş Başarısız")
                 time.sleep(0.5)
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
 admin_giris = admin_giris(driver, "http://localhost/admin", {"username": "username", "pass": "pass", "deger": "a-ilan-img", "submit_button": "submit_button"})
 

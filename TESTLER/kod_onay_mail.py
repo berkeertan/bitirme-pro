@@ -44,7 +44,7 @@ class e_mail:
         db.commit()
         time.sleep(3)
 
-        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE id = (SELECT MAX(id) FROM f_basvurular)")
+        cursor.execute("SELECT f_basvuru_url FROM f_basvurular WHERE f_basvuru_id = (SELECT MAX(f_basvuru_id) FROM f_basvurular)")
         time.sleep(2)
         result = cursor.fetchall()
         for i in result:

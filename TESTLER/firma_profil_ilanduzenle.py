@@ -120,7 +120,7 @@ class firma_ilan_duzenle:
                     file.write(" " + "\n\n")
                 cprint(Fore.RED, "Basarisiz")
 
-driver = webdriver.Chrome("C:\\xampp\\chromedriver.exe")
+driver = webdriver.Chrome("C:\\Users\\BERKE\\Downloads\\chromedriver.exe")
 
 print(Fore.CYAN + "Kullanıcı adı gir") 
 kullanici_adi = input()
