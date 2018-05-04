@@ -130,7 +130,7 @@ class firma_ilan_duzenle:
                 cprint(Fore.RED, "Alınan Sonuç = İŞLEM BAŞARISIZ!")  
                 print("\n") 
                 time.sleep(3)
-                
+
         cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
@@ -213,7 +213,7 @@ class firma_ilan_duzenle:
 
             else:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                with open("LOGS/firma-ilan-ekle.txt", "a") as file:
+                with open("LOGS/firma-ilan-duzenle.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")

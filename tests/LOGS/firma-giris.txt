@@ -1,0 +1,130 @@
+ 
+2018-05-04 21:41:50 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 20167070 
+Girilen Kullanýcý Þifresi : 5656 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:41:51 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 12345 
+Girilen Kullanýcý Þifresi : 6565 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:41:53 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 1379248 
+Girilen Kullanýcý Þifresi : 35653235 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:41:59 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : vestel 
+Girilen Kullanýcý Þifresi : 123456 
+Beklenen sonuç: Giriþ Baþarýlý 
+Alýnan sonuç: Giriþ Baþarýlý 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:51:13 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : vestel 
+Girilen Kullanýcý Þifresi : 123456 
+Beklenen sonuç: Giriþ Baþarýlý 
+Alýnan sonuç: Giriþ Baþarýlý 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:51:53 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : vestel 
+Girilen Kullanýcý Þifresi : 123456 
+Beklenen sonuç: Giriþ Baþarýlý 
+Alýnan sonuç: Giriþ Baþarýlý 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:52:01 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 20167070 
+Girilen Kullanýcý Þifresi : 5656 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:52:02 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 12345 
+Girilen Kullanýcý Þifresi : 6565 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:52:04 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 1379248 
+Girilen Kullanýcý Þifresi : 35653235 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:52:11 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : vestel 
+Girilen Kullanýcý Þifresi : 123456 
+Beklenen sonuç: Giriþ Baþarýlý 
+Alýnan sonuç: Giriþ Baþarýlý 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:59:12 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 20167070 
+Girilen Kullanýcý Þifresi : 5656 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:59:13 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 12345 
+Girilen Kullanýcý Þifresi : 6565 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:59:15 
+Yapýlan test: Baþarýsýz þifre testi 
+Girilen Kullanýcý Adý : 1379248 
+Girilen Kullanýcý Þifresi : 35653235 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+

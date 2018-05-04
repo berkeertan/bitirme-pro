@@ -1,0 +1,130 @@
+ 
+2018-05-04 21:17:17 
+Yapýlan test: Baþarýsýz giriþ testi 
+Girilen Kullanýcý Adý : 20167070 
+Girilen Kullanýcý Þifresi : 20167070 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:17:21 
+Yapýlan test: Baþarýsýz giriþ testi 
+Girilen Kullanýcý Adý : 12345 
+Girilen Kullanýcý Þifresi : 12345 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:17:24 
+Yapýlan test: Baþarýsýz giriþ testi 
+Girilen Kullanýcý Adý : 1379248 
+Girilen Kullanýcý Þifresi : 1379248 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:17:29 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:21:12 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:21:47 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:23:30 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:25:59 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:26:30 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:27:18 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:27:24 
+Yapýlan test: Baþarýsýz giriþ testi 
+Girilen Kullanýcý Adý : 70400056 
+Girilen Kullanýcý Þifresi : 70400056 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:27:27 
+Yapýlan test: Baþarýsýz giriþ testi 
+Girilen Kullanýcý Adý : adasfsa 
+Girilen Kullanýcý Þifresi : adasfsa 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISIZ! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:27:32 
+Yapýlan test: Baþarýlý giriþ testi 
+Girilen Kullanýcý Adý : 7040000001 
+Girilen Kullanýcý Þifresi : 7040000001 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARALI! 
+
+TEST BAÞARILI! 
+

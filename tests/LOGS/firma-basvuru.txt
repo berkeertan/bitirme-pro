@@ -1,0 +1,45 @@
+ 
+2018-05-04 21:41:07 
+Yapýlan test: Baþarýsýz e-mail baþvuru testi 
+Girilen E-Mail : berke.com 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISZ! 
+
+TEST BAÞARILI 
+
+ 
+2018-05-04 21:41:10 
+Yapýlan test: Baþarýsýz e-mail baþvuru testi 
+Girilen E-Mail : 1234518 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISZ! 
+
+TEST BAÞARILI 
+
+ 
+2018-05-04 21:41:18 
+Yapýlan test: Baþarýlý e-mail baþvuru testi 
+Girilen E-Mail : basvuru@gmail.com 
+Beklenen sonuç: GÝRÝÞ BAÞARILI! 
+Alýnan sonuç: GÝRÝÞ BAÞARILI! 
+
+TEST BAÞARILI! 
+
+ 
+2018-05-04 21:41:27 
+Yapýlan test: Baþarýsýz e-mail baþvuru testi 
+Girilen E-Mail : berke.com 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISZ! 
+
+TEST BAÞARILI 
+
+ 
+2018-05-04 21:41:30 
+Yapýlan test: Baþarýsýz e-mail baþvuru testi 
+Girilen E-Mail : 1234518 
+Beklenen sonuç: GÝRÝÞ BAÞARISIZ! 
+Alýnan sonuç: GÝRÝÞ BAÞARISZ! 
+
+TEST BAÞARILI 
+

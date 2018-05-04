@@ -178,7 +178,7 @@ class firma_ilan:
                 cprint(Fore.LIGHTMAGENTA_EX, "TEST BAŞARISIZ!") 
                 print("\n") 
                 time.sleep(2)
-        cprint(Fore.YELLOW, "Çıkmak için 'e' başarılı test için 'b' tuşlayın")
+        cprint(Fore.YELLOW, "Çıkmak için 'e' başarısız test için 'b' tuşlayın")
         a = input()
         if a == 'e':
             driver.close()
@@ -189,12 +189,14 @@ class firma_ilan:
             self.ilan_mail = self.driver.find_element_by_id(self.degerler["ilan_mail"])
             self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
             self.ilan_text = self.driver.find_element_by_id(self.degerler["ilanlar_text"])  
+            self.ilan_kisi = self.driver.find_element_by_id(self.degerler["ilan_kisi"])
             self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
             time.sleep(2)
             firma_ilan.basarisiz(["bilgisayar", "makine"], ["5656", "6565"], ["adress", "adress2"], ["ac", "ac2"], ["asdas", "9"])
 
     def basarisiz(self, ilan_baslik, ilan_mail, ilan_adres, ilan_text, ilan_kisi):
         db2 = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "deustaj", use_unicode=True, charset="utf8")
+        cursor = db2.cursor()
         cursor2 = db2.cursor()
         cursor2.execute("SELECT * FROM ilanlar")
 
@@ -204,7 +206,8 @@ class firma_ilan:
             self.ilan_mail.clear()
             self.ilan_text.clear()
             self.ilan_adres.clear()
-            
+            self.ilan_kisi.clear()
+
             self.ilan_baslik.send_keys(ilan_baslik[i])
             self.ilan_mail.send_keys(ilan_mail[i])
             self.ilan_kisi.send_keys(ilan_kisi[i])
@@ -227,16 +230,17 @@ class firma_ilan:
             time.sleep(2)
             db2.commit()
             time.sleep(2)
+            cursor.execute("SELECT * FROM ilanlar")
 
             #cursor.execute("SELECT * FROM bolumler INNER JOIN ilanlar ON bolumler.bolum_id = ilanlar.ilan_bolumid WHERE ilanlar.ilan_baslik = '%s' AND ilanlar.ilan_aciklama = '%s' AND ilanlar.ilan_basvuru_mail = '%s' AND ilanlar.ilan_is_adres = '%s' AND ilanlar.ilan_bolumid = bolumler.bolum_id"  %  (ilan_baslik[i], ilan_text[i], ilan_mail[i], ilan_adres[i]))
 
-            if cursor2.rowcount == self.cursor.rowcount:
+            if cursor2.rowcount == cursor.rowcount:
                 d = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 with open("LOGS/firma-ilan-ekle.txt", "a") as file:
                     file.write(" " + "\n")   
                     file.write(str(d))
                     file.write(" " + "\n")
-                    file.write("Yapılan test: Başarılı şifre testi")
+                    file.write("Yapılan test: Başarısız şifre testi")
                     file.write(" " + "\n")
                     file.write("Girilen ilan Başlığı : " + ilan_baslik[i])
                     file.write(" " + "\n")
@@ -324,13 +328,21 @@ class firma_ilan:
         if a == 'e':
             driver.close()
         elif a == 'b':
-            self.driver.find_element_by_id("ilan_ekle").click()
+            self.driver.find_element_by_id("ilani_ekle").click()
             time.sleep(2)
+
+            self.ilan_baslik.clear()
+            self.ilan_mail.clear()
+            self.ilan_text.clear()
+            self.ilan_adres.clear()
+            self.ilan_kisi.clear()
+
             self.ilan_baslik = self.driver.find_element_by_id(self.degerler["ilan_baslik"])
             self.ilan_mail = self.driver.find_element_by_id(self.degerler["ilan_mail"])
             self.ilan_adres = self.driver.find_element_by_id(self.degerler["ilanlar_adres"])
             self.ilan_text = self.driver.find_element_by_id(self.degerler["ilanlar_text"])  
             self.buton = self.driver.find_element_by_id(self.degerler["ilan_gonder"])
+            self.ilan_kisi = self.driver.find_element_by_id(self.degerler["ilan_kisi"])
             time.sleep(2)
             firma_ilan.basarili(["makine"], ["berkeertan@gmail.com"], ["adres"], ["aciklama"], ["2"])
                   

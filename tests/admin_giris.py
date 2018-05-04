@@ -118,7 +118,8 @@ class admin_giris:
                 self.driver.find_element_by_class_name("navbar-toggler").click()
                 time.sleep(1.5)
                 self.driver.find_element_by_xpath( "//button[@data-toggle='dropdown']").click()
-                self.driver.find_element_by_class_name("dropdown-item").click()
+                time.sleep(1.5)
+                self.driver.find_element_by_id("cik").click()
                 time.sleep(1)
                 self.driver.get(self.url)
                 self.a_name = self.driver.find_element_by_id(self.dizi["username"])
@@ -127,7 +128,7 @@ class admin_giris:
                 admin_giris.basarisiz(["70400056", "adasfsa"],["123456", "2345486"])
             else:
                 self.driver.find_element_by_xpath( "//button[@data-toggle='dropdown']").click()
-                self.driver.find_element_by_class_name("dropdown-item").click()
+                self.driver.find_element_by_id("cik").click()
                 time.sleep(1)
                 self.driver.get(self.url)
                 self.a_name = self.driver.find_element_by_id(self.dizi["username"])
