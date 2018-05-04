@@ -114,7 +114,6 @@ if test == 1:
     staj_donemi_ekle.basarisiz(["10-09-11","11-10-11"], ["10-09-11", "11-10-11"], ["01-10-1998","26-10-1998"], ["01-10", "10-11"])
     print("")
 
-
 elif test == 2:
     print(Fore.YELLOW + "Çalıştırılan test: " + "staj_donem_ekle, basarili_test") 
     staj_donemi_ekle.basarili(["10-09-2018"] ,["30-09-2018"], ["01-10-2018"], ["29-10-2018"])
